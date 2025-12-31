@@ -1,10 +1,7 @@
 node_modules
+**/node_modules
 .git
-.env
+.gitignore
+Dockerfile
+docker-compose.yml
 npm-debug.log
-dist
-.DS_Store
-# We need to allow frontend and backend folders
-# But ignore their local node_modules
-frontend/node_modules
-backend/node_modules
