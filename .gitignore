@@ -1,33 +1,50 @@
+############################
 # Dependencies
+############################
 node_modules/
-package-lock.json
-yarn.lock
 
+############################
 # Build output
+############################
 dist/
 build/
 
+############################
 # Environment variables
+############################
 .env
 .env.local
+.env.*.local
 
-# IDE
+############################
+# Logs
+############################
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+############################
+# IDE / Editor
+############################
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS
+############################
+# OS files
+############################
 .DS_Store
 Thumbs.db
 
-# Ignore system / docker / binaries
-*.dll
-*.exe
-*.log
-*.json
+############################
+# Docker / System (optional)
+############################
 docker/
 *.bin
 
-# Ignore cursor working folders
+############################
+# Cursor / AI tools
+############################
 .cursor/
