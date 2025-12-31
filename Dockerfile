@@ -1,9 +1,11 @@
 ################################
-# Stage 1: Frontend build
+# Stage 1: Frontend Build (Node 20)
 ################################
-FROM node:18-alpine AS frontend-build
+FROM node:20-alpine AS frontend-build
 
 WORKDIR /app/frontend
+
+RUN apk add --no-cache python3 make g++ bash
 
 COPY frontend/package*.json ./
 RUN npm install --legacy-peer-deps
@@ -13,13 +15,13 @@ RUN npm run build
 
 
 ################################
-# Stage 2: Backend runtime
+# Stage 2: Backend Runtime (Node 18)
 ################################
 FROM node:18-alpine
 
 WORKDIR /app
 
-RUN apk add --no-cache python3 make g++
+RUN apk add --no-cache python3 make g++ bash
 
 COPY backend/package*.json ./
 RUN npm install --legacy-peer-deps
