@@ -24,7 +24,7 @@ Install [Docker](https://docs.docker.com/get-docker/) and [Docker Compose](https
 3. Access:
    - **API Root**: [http://localhost:8082/](http://localhost:8082/) (Returns App Name/Port)
    - **Frontend**: [http://localhost:8082/index.html](http://localhost:8082/index.html)
-  **DOCKERHUB_IMAGE_URL**: [https://hub.docker.com/repository/docker/kadalapavankalyan789/e-commerce-app/general]
+   - **DOCKERHUB_IMAGE_URL**: [https://hub.docker.com/repository/docker/kadalapavankalyan789/e-commerce-app/general]
 
 ## Architecture
 
