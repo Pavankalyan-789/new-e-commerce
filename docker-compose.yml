@@ -1,0 +1,18 @@
+services:
+  backend:
+    build: ./backend
+    container_name: e-commerce-backend
+    ports:
+      - "8082:3000"   # free host port
+    environment:
+      - PORT=3000
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    container_name: e-commerce-frontend
+    ports:
+      - "8083:80"     # free host port
+    depends_on:
+      - backend
+    restart: unless-stopped
